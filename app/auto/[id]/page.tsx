@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { getCarById, getCars } from '@/lib/cars';
+import { getCarById } from '@/lib/cars';
 import { TopBar } from '@/components/TopBar';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -11,14 +11,11 @@ interface Props {
   params: { id: string }
 }
 
-export async function generateStaticParams() {
-  const cars = getCars();
-  return cars.map((car) => ({
-    id: car.id,
-  }));
-}
+// REMOVE generateStaticParams completely - no static generation
 
-export default function CarDetailPage({ params }: Props) {
+// Make it an async server component for future Supabase integration
+export default async function CarDetailPage({ params }: Props) {
+  // This will work with Supabase later when you make getCarById async
   const car = getCarById(params.id);
   
   if (!car) {
@@ -41,13 +38,13 @@ export default function CarDetailPage({ params }: Props) {
     { icon: Zap, label: 'Vermogen', value: `${car.horsepower} pk` },
   ];
 
+  // Rest of your component stays exactly the same
   return (
     <div className="min-h-screen">
       <TopBar />
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back Button */}
         <Link 
           href="/"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 sm:mb-8 group"
@@ -57,7 +54,6 @@ export default function CarDetailPage({ params }: Props) {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Image Gallery */}
           <div>
             <div className="relative aspect-[4/3] sm:aspect-video mb-4 overflow-hidden rounded-lg">
               <Image
@@ -86,7 +82,6 @@ export default function CarDetailPage({ params }: Props) {
             )}
           </div>
 
-          {/* Car Details */}
           <div>
             <div className="mb-4 sm:mb-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{car.title}</h1>
@@ -97,7 +92,6 @@ export default function CarDetailPage({ params }: Props) {
               <span className="text-3xl sm:text-4xl font-bold text-gray-900">{formatPrice(car.price)}</span>
             </div>
 
-            {/* Specifications */}
             <div className="bg-gray-50 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Specificaties</h3>
               <div className="grid grid-cols-1 gap-3 sm:gap-4">
@@ -116,13 +110,11 @@ export default function CarDetailPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Description */}
             <div className="mb-6 sm:mb-8">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Omschrijving</h3>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{car.description}</p>
             </div>
 
-            {/* Contact Buttons */}
             <div className="flex flex-col gap-3 sm:gap-4">
               <button className="w-full bg-black text-white py-3 px-6 font-semibold hover:bg-gray-800 transition-colors text-sm sm:text-base">
                 Interesse? Neem contact op
