@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { getCarById } from '@/lib/cars';
+import { getCarById, getCars } from '@/lib/cars';
 import { TopBar } from '@/components/TopBar';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -9,6 +9,13 @@ import Link from 'next/link';
 
 interface Props {
   params: { id: string }
+}
+
+export async function generateStaticParams() {
+  const cars = getCars();
+  return cars.map((car) => ({
+    id: car.id,
+  }));
 }
 
 export default function CarDetailPage({ params }: Props) {
