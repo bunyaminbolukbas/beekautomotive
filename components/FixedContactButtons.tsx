@@ -46,7 +46,7 @@ export function FixedContactButtons() {
               href={button.href}
               target={button.href.startsWith('http') ? '_blank' : undefined}
               rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className={`group relative flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg transition-all duration-300 hover:scale-110 ${button.color}`}
+              className={`group relative flex items-center justify-center w-14 h-14 rounded-lg text-white shadow-lg transition-all duration-300 hover:scale-110 ${button.color}`}
               title={button.label}
             >
               <IconComponent className="w-6 h-6" />

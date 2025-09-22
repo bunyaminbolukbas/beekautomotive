@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 export function NewNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navigation = [
     { name: 'Aanbod', href: '/aanbod' },
@@ -15,24 +16,35 @@ export function NewNavigation() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      {/* Header with logo and hamburger */}
-      <header className="bg-white shadow-sm relative z-50">
+      {/* Fixed Navigation Bar */}
+      <header className={`fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300 ${
+        scrolled ? 'py-2' : 'py-4'
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Spacer for balance */}
-            <div className="w-10"></div>
-
-            {/* Logo - Centered */}
-            <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="flex justify-between items-center">
+            {/* Logo - Left Side */}
+            <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/beek-automotive-logo.png"
                   alt="Beek Automotive"
                   width={200}
                   height={100}
-                  className="h-10 w-auto"
+                  className={`w-auto transition-all duration-300 ${
+                    scrolled ? 'h-8' : 'h-12'
+                  }`}
                 />
               </Link>
             </div>
@@ -51,6 +63,9 @@ export function NewNavigation() {
           </div>
         </div>
       </header>
+
+      {/* Spacer to prevent content from going under fixed header */}
+      <div className={`transition-all duration-300 ${scrolled ? 'h-16' : 'h-20'}`}></div>
 
       {/* Overlay */}
       {isOpen && (

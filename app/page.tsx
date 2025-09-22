@@ -1,5 +1,6 @@
 import { NewNavigation } from '@/components/NewNavigation';
 import { FixedContactButtons } from '@/components/FixedContactButtons';
+import { ScrollToTop } from '@/components/ScrollToTop';
 import { Hero } from '@/components/Hero';
 import { NewArrivals } from '@/components/NewArrivals';
 import { BrandLogos } from '@/components/BrandLogos';
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="min-h-screen">
       <NewNavigation />
       <FixedContactButtons />
+      <ScrollToTop />
       <Hero />
       <NewArrivals />
       <BrandLogos />
