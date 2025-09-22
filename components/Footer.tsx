@@ -41,18 +41,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Navigatie</h4>
-            <ul className="space-y-2">
-              <li><a href="/" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Home</a></li>
-              <li><a href="/aanbod" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Aanbod</a></li>
-              <li><a href="/financiering" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Financiering</a></li>
-              <li><a href="/reviews" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Reviews</a></li>
-              <li><a href="/over-ons" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Over ons</a></li>
-              <li><a href="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">Contact</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </footer>
