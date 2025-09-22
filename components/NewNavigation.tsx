@@ -105,15 +105,6 @@ export function NewNavigation() {
             ))}
           </nav>
 
-          {/* Contact Info in Menu */}
-          <div className="mt-8 pt-8 border-t border-gray-200">
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Contact</h3>
-            <div className="space-y-3 text-sm text-gray-600">
-              <div>085 792 6363</div>
-              <div>info@beekautomotive.nl</div>
-              <div>Het Laar 6, 6733 BZ Wekerom</div>
-            </div>
-          </div>
         </div>
       </div>
     </>
