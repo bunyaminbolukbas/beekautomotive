@@ -21,17 +21,8 @@ export function NewNavigation() {
       <header className="bg-white shadow-sm relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Hamburger Menu */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
-            >
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
-            </button>
+            {/* Spacer for balance */}
+            <div className="w-10"></div>
 
             {/* Logo - Centered */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -46,8 +37,17 @@ export function NewNavigation() {
               </Link>
             </div>
 
-            {/* Spacer for balance */}
-            <div className="w-10"></div>
+            {/* Hamburger Menu */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
+            >
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
       </header>
@@ -93,8 +93,9 @@ export function NewNavigation() {
           <div className="mt-8 pt-8 border-t border-gray-200">
             <h3 className="text-sm font-semibold text-gray-900 mb-4">Contact</h3>
             <div className="space-y-3 text-sm text-gray-600">
-              <div>+31 34 123 45 67</div>
+              <div>085 792 6363</div>
               <div>info@beekautomotive.nl</div>
+              <div>Het Laar 6, 6733 BZ Wekerom</div>
               <div className="flex items-center">
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (

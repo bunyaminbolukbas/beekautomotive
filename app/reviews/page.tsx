@@ -1,5 +1,5 @@
-import { TopBar } from '@/components/TopBar';
-import { Navbar } from '@/components/Navbar';
+import { NewNavigation } from '@/components/NewNavigation';
+import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
 import { Star, Quote } from 'lucide-react';
 
@@ -60,8 +60,8 @@ export default function ReviewsPage() {
 
   return (
     <div className="min-h-screen">
-      <TopBar />
-      <Navbar />
+      <NewNavigation />
+      <FixedContactButtons />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}

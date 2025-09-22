@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getCarById } from '@/lib/cars';
-import { TopBar } from '@/components/TopBar';
-import { Navbar } from '@/components/Navbar';
+import { NewNavigation } from '@/components/NewNavigation';
+import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
 import { ArrowLeft, Calendar, Gauge, Fuel, Settings, Zap } from 'lucide-react';
 import Link from 'next/link';
@@ -41,8 +41,8 @@ export default async function CarDetailPage({ params }: Props) {
   // Rest of your component stays exactly the same
   return (
     <div className="min-h-screen">
-      <TopBar />
-      <Navbar />
+      <NewNavigation />
+      <FixedContactButtons />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link 

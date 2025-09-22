@@ -1,6 +1,6 @@
 import { getCars } from '@/lib/cars';
-import { TopBar } from '@/components/TopBar';
-import { Navbar } from '@/components/Navbar';
+import { NewNavigation } from '@/components/NewNavigation';
+import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
 import { CarCard } from '@/components/CarCard';
 
@@ -9,8 +9,8 @@ export default function AanbodPage() {
 
   return (
     <div className="min-h-screen">
-      <TopBar />
-      <Navbar />
+      <NewNavigation />
+      <FixedContactButtons />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-8 sm:mb-12">

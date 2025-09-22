@@ -7,29 +7,29 @@ export function FixedContactButtons() {
     {
       icon: Phone,
       label: 'Bel ons',
-      href: 'tel:+31341234567',
-      color: 'bg-blue-600 hover:bg-blue-700',
-      detail: '+31 34 123 45 67'
+      href: 'tel:+31857926363',
+      color: 'bg-black hover:bg-gray-800',
+      detail: '085 792 6363'
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
-      href: 'https://wa.me/31341234567',
-      color: 'bg-green-600 hover:bg-green-700',
+      href: 'https://wa.me/31857926363',
+      color: 'bg-black hover:bg-gray-800',
       detail: 'Chat met ons'
     },
     {
       icon: Mail,
       label: 'E-mail',
       href: 'mailto:info@beekautomotive.nl',
-      color: 'bg-gray-600 hover:bg-gray-700',
+      color: 'bg-black hover:bg-gray-800',
       detail: 'info@beekautomotive.nl'
     },
     {
       icon: Calendar,
       label: 'Afspraak',
       href: '/contact',
-      color: 'bg-orange-600 hover:bg-orange-700',
+      color: 'bg-black hover:bg-gray-800',
       detail: 'Plan een afspraak'
     }
   ];

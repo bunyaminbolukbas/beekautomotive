@@ -35,18 +35,15 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-sm text-gray-600">+31 38 458 09 56</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-sm text-gray-600">+31 038 458 09 56</span>
+                <span className="text-sm text-gray-600">085 792 6363</span>
               </div>
             </div>
             
             <div className="mt-6">
               <p className="text-sm font-medium text-gray-900 mb-2">Beek Automotive B.V.</p>
-              <p className="text-sm text-gray-600">Westeinde 106</p>
-              <p className="text-sm text-gray-600">3844 DR Harderwijk</p>
+              <p className="text-sm text-gray-600">Het Laar 6</p>
+              <p className="text-sm text-gray-600">6733 BZ Wekerom</p>
+              <p className="text-sm text-gray-600">Gelderland</p>
             </div>
           </div>
 
@@ -68,8 +65,9 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Showroom</h4>
             <div className="space-y-2 mb-4">
               <p className="text-sm font-medium text-gray-900">Beek Automotive B.V.</p>
-              <p className="text-sm text-gray-600">Westeinde 106</p>
-              <p className="text-sm text-gray-600">3844 DR Harderwijk</p>
+              <p className="text-sm text-gray-600">Het Laar 6</p>
+              <p className="text-sm text-gray-600">6733 BZ Wekerom</p>
+              <p className="text-sm text-gray-600">Gelderland</p>
             </div>
             <div className="space-y-2">
               <p className="text-sm text-gray-600">Enkel op afspraak</p>

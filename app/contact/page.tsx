@@ -1,13 +1,13 @@
-import { TopBar } from '@/components/TopBar';
-import { Navbar } from '@/components/Navbar';
+import { NewNavigation } from '@/components/NewNavigation';
+import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      <TopBar />
-      <Navbar />
+      <NewNavigation />
+      <FixedContactButtons />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
@@ -38,8 +38,9 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Adres</h3>
                   <p className="text-gray-600">
                     Beek Automotive B.V.<br />
-                    Westeinde 106<br />
-                    3844 DR Harderwijk<br />
+                    Het Laar 6<br />
+                    6733 BZ Wekerom<br />
+                    Gelderland<br />
                     Nederland
                   </p>
                 </div>
@@ -54,13 +55,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Telefoon</h3>
                   <div className="space-y-1">
                     <p className="text-gray-600">
-                      <a href="tel:+31384580956" className="hover:text-gray-900 transition-colors">
-                        +31 38 458 09 56
-                      </a>
-                    </p>
-                    <p className="text-gray-600">
-                      <a href="tel:+310384580956" className="hover:text-gray-900 transition-colors">
-                        +31 038 458 09 56
+                      <a href="tel:+31857926363" className="hover:text-gray-900 transition-colors">
+                        085 792 6363
                       </a>
                     </p>
                   </div>
@@ -93,7 +89,7 @@ export default function ContactPage() {
                     Stuur ons een bericht via WhatsApp voor snelle vragen
                   </p>
                   <a
-                    href="https://wa.me/31384580956"
+                    href="https://wa.me/31857926363"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"

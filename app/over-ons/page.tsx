@@ -1,13 +1,13 @@
-import { TopBar } from '@/components/TopBar';
-import { Navbar } from '@/components/Navbar';
+import { NewNavigation } from '@/components/NewNavigation';
+import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
 import { Car, Heart, Users, Award } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <TopBar />
-      <Navbar />
+      <NewNavigation />
+      <FixedContactButtons />
       
       {/* Hero Section with Team Photo */}
       <div className="relative py-24 sm:py-32">
