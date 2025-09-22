@@ -11,6 +11,7 @@ export function NewNavigation() {
 
   const navigation = [
     { name: 'Aanbod', href: '/aanbod' },
+    { name: 'Financiering', href: '/financiering' },
     { name: 'Reviews', href: '/reviews' },
     { name: 'Over ons', href: '/over-ons' },
     { name: 'Contact', href: '/contact' },
@@ -111,14 +112,6 @@ export function NewNavigation() {
               <div>085 792 6363</div>
               <div>info@beekautomotive.nl</div>
               <div>Het Laar 6, 6733 BZ Wekerom</div>
-              <div className="flex items-center">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  ))}
-                </div>
-                <span className="ml-2">9.9/10 rating</span>
-              </div>
             </div>
           </div>
         </div>

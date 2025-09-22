@@ -1,27 +1,138 @@
+'use client';
+
+import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { getNewArrivals } from '@/lib/cars';
 import { CarCard } from './CarCard';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 export function NewArrivals() {
   const cars = getNewArrivals();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      // On mobile, scroll exactly one full car width, on larger screens use fixed amount
+      const isMobile = window.innerWidth < 640;
+      const scrollAmount = isMobile ? scrollRef.current.clientWidth : 400;
+
+      if (direction === 'left') {
+        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeftArrow(scrollLeft > 10);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+      return () => scrollContainer.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
 
   return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="bg-white py-12 sm:py-16 md:py-24" data-section="cars">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4 md:mb-6">
             Nieuw binnen
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 font-light px-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light px-2">
             Snel bij zijn, ze zijn namelijk zo verkocht.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {cars.map((car) => (
-            <CarCard key={car.id} car={car} showNewBadge={true} />
-          ))}
+        {/* Horizontal Scrolling Car Grid with Overlay Arrows */}
+        <div className="relative">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto space-x-0 sm:space-x-4 md:space-x-6 pb-4 scrollbar-hide pr-0 sm:pr-20 md:pr-24"
+            style={{
+              scrollSnapType: 'x mandatory',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+            onScroll={handleScroll}
+          >
+            {cars.map((car) => (
+              <div
+                key={car.id}
+                className="flex-none w-full sm:w-80 md:w-96 px-4 sm:px-0"
+                style={{ scrollSnapAlign: 'start' }}
+              >
+                <CarCard car={car} showNewBadge={true} />
+              </div>
+            ))}
+          </div>
+
+          {/* Left Arrow - Always visible on mobile when there are previous cars */}
+          {showLeftArrow && (
+            <button
+              onClick={() => scroll('left')}
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-3 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110 border border-gray-200"
+              aria-label="Previous cars"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
+            </button>
+          )}
+
+          {/* Right Arrow - Always visible on mobile when there are more cars */}
+          {showRightArrow && (
+            <button
+              onClick={() => scroll('right')}
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-3 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110 border border-gray-200"
+              aria-label="Next cars"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
+            </button>
+          )}
+        </div>
+
+        {/* Mobile Navigation Dots */}
+        <div className="flex justify-center mt-4 sm:mt-6 md:hidden">
+          <div className="flex space-x-2">
+            {Array.from({ length: Math.ceil(cars.length / 3) }).map((_, index) => (
+              <div
+                key={index}
+                className="w-2 h-2 rounded-full bg-gray-400"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* View All Cars Button */}
+        <div className="text-center mt-8 sm:mt-12 md:mt-16 px-4">
+          <Link
+            href="/aanbod"
+            className="inline-flex items-center space-x-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm sm:text-base"
+          >
+            <span>Volledig aanbod</span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+          </Link>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 }

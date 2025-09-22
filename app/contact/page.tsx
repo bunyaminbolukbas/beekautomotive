@@ -127,7 +127,7 @@ export default function ContactPage() {
             
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.8234567890123!2d5.6234567890123456!3d52.34567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWesteinde%20106%2C%203844%20DR%20Harderwijk!5e0!3m2!1snl!2snl!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.123456789!2d5.5555555!3d52.1666666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sHet%20Laar%206%2C%206733%20BZ%20Wekerom!5e0!3m2!1snl!2snl!4v1234567890123"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -141,11 +141,11 @@ export default function ContactPage() {
             <div className="mt-6 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Routebeschrijving</h3>
               <p className="text-gray-600 mb-4">
-                Beek Automotive is gevestigd aan de Westeinde 106 in Harderwijk. 
+                Beek Automotive is gevestigd aan Het Laar 6 in Wekerom, Gelderland.
                 Parkeren is gratis mogelijk voor de deur.
               </p>
               <a
-                href="https://www.google.com/maps/dir//Westeinde+106,+3844+DR+Harderwijk"
+                href="https://www.google.com/maps/dir//Het+Laar+6,+6733+BZ+Wekerom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-black hover:text-gray-700 transition-colors"

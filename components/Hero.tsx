@@ -17,7 +17,7 @@ export function Hero() {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
       </div>
 
       {/* Content */}
@@ -33,10 +33,17 @@ export function Hero() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <button
           onClick={() => {
-            window.scrollTo({
-              top: window.innerHeight,
-              behavior: 'smooth'
-            });
+            const carsSection = document.querySelector('[data-section="cars"]');
+            if (carsSection) {
+              const rect = carsSection.getBoundingClientRect();
+              const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              const targetPosition = scrollTop + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+
+              window.scrollTo({
+                top: Math.max(0, targetPosition),
+                behavior: 'smooth'
+              });
+            }
           }}
           className="group flex flex-col items-center space-y-2 text-white hover:text-gray-300 transition-colors duration-300"
         >

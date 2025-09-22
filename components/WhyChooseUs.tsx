@@ -27,13 +27,15 @@ export function WhyChooseUs() {
             
             <div className="mb-10 sm:mb-12">
               <p className="text-lg sm:text-xl text-gray-200 font-medium mb-6 sm:mb-8">
-                Beek Automotive specialiseert zich in datgene waar autoliefhebbers voor omkijken
+                Elke autoliefhebber verdient het om in zijn of haar droomauto te rijden
               </p>
-              
+
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
+                Ongeacht prijsklasse of type merk. Landsgrenzen horen geen beperkingen te vormen voor het kopen van je favoriete auto. Met die gedachte is Beek Automotive opgericht.
+              </p>
+
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Welkom bij Beek Automotive, de bestemming in Harderwijk voor liefhebbers van exclusieve en premium auto's. 
-                Opgericht door Daan Smit, een gepassioneerde autoliefhebber, belichaamt Beek Automotive een unieke filosofie 
-                in de autowereld. Wij richten ons niet op het alledaagse, maar juist op het bijzondere.
+                Eigenaar Rutger van Beek is zijn hele leven al een autofanaat. Op jonge leeftijd wist hij dat zijn toekomst in de autowereld lag. Rutger studeerde aan de bekende IVA Business School. Tijdens zijn opleiding deed hij werkervaring op bij meerdere grote autodealers. Na jaren auto's te hebben verkocht, was de tijd rijp om zijn eigen bedrijf te beginnen.
               </p>
             </div>
           </div>

@@ -18,7 +18,7 @@ export function CarCard({ car, showNewBadge = true }: CarCardProps) {
 
   return (
     <Link href={`/auto/${car.id}`} className="group block">
-      <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100 mx-auto max-w-sm sm:max-w-none">
+      <div className="bg-white rounded-3xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 mx-auto max-w-sm sm:max-w-none">
         <div className="relative aspect-[4/3] sm:aspect-video overflow-hidden">
           <Image
             src={car.images[0] || '/placeholder-car.jpg'}
@@ -29,26 +29,26 @@ export function CarCard({ car, showNewBadge = true }: CarCardProps) {
           />
           {showNewBadge && car.isNewArrival && (
             <div className="absolute top-4 right-4">
-              <span className="bg-black text-white px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium">
+              <span className="bg-black text-white px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium rounded-2xl">
                 VERSE VANGST
               </span>
             </div>
           )}
         </div>
         
-        <div className="p-4 sm:p-6">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors line-clamp-2">
+        <div className="p-3 sm:p-4 md:p-6">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors line-clamp-2">
             {car.title}
           </h3>
-          
+
           <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 mb-3">
             <span>{car.year}</span>
             <span>{car.mileage.toLocaleString('nl-NL')} km</span>
             <span>{car.horsepower} pk</span>
           </div>
-          
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <span className="text-xl sm:text-2xl font-bold text-gray-900">
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-black">
               {formatPrice(car.price)}
             </span>
             <span className="text-xs sm:text-sm text-gray-500 capitalize">

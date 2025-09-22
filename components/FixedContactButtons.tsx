@@ -35,8 +35,8 @@ export function FixedContactButtons() {
   ];
 
   return (
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40">
-      <div className="flex flex-col space-y-3">
+    <div className="fixed right-4 top-1/4 transform -translate-y-1/2 z-40">
+      <div className="flex flex-col space-y-2">
         {contactButtons.map((button, index) => {
           const IconComponent = button.icon;
 

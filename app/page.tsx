@@ -3,7 +3,7 @@ import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { Hero } from '@/components/Hero';
 import { NewArrivals } from '@/components/NewArrivals';
-import { BrandLogos } from '@/components/BrandLogos';
+import { SpecialOfferSection } from '@/components/SpecialOfferSection';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { Footer } from '@/components/Footer';
 
@@ -15,7 +15,7 @@ export default function Home() {
       <ScrollToTop />
       <Hero />
       <NewArrivals />
-      <BrandLogos />
+      <SpecialOfferSection />
       <WhyChooseUs />
       <Footer />
     </div>
