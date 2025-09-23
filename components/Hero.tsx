@@ -18,12 +18,14 @@ export function Hero() {
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        {/* Gradient fade to black at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
             Voor kwaliteit, kom je naar Beek
           </h1>
         </div>
@@ -47,7 +49,7 @@ export function Hero() {
           }}
           className="group flex flex-col items-center space-y-3 text-white hover:text-blue-300 transition-all duration-300"
         >
-          <span className="text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
+          <span className="text-sm sm:text-base md:text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
           <div className="bg-white/10 backdrop-blur-sm rounded-full p-2 group-hover:bg-white/20 transition-all duration-300">
             <ChevronDown className="w-6 h-6" />
           </div>

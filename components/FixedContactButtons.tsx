@@ -43,7 +43,7 @@ export function FixedContactButtons() {
 
   return (
     <div className="fixed right-0 top-1/4 transform -translate-y-1/2 z-40">
-      <div className="flex flex-col space-y-1">
+      <div className="flex flex-col space-y-1 sm:space-y-2">
         {contactButtons.map((button, index) => {
           const IconComponent = button.icon;
 
@@ -53,10 +53,10 @@ export function FixedContactButtons() {
               href={button.href}
               target={button.href.startsWith('http') ? '_blank' : undefined}
               rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className={`group relative flex items-center justify-center w-12 h-12 rounded-md text-white shadow-md transition-all duration-300 hover:scale-105 border border-gray-500/20 ${button.color}`}
+              className={`group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-md text-white shadow-md transition-all duration-300 hover:scale-105 border border-gray-500/20 ${button.color}`}
               title={button.label}
             >
-              <IconComponent className="w-5 h-5" />
+              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
 
               {/* Tooltip */}
               <div className="absolute right-16 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
