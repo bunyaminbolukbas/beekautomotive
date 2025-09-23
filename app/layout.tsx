@@ -9,8 +9,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Beek Automotive - Premium Auto Dealership',
-  description: 'Gespecialiseerd in exclusieve sportauto\'s en luxe voertuigen. Drive en passie voor specialer, strakker en sneller.',
+  title: 'Beek Automotive - Auto Dealer',
+  description: 'Ontdek de nieuwste modellen bij Beek Automotive.',
 };
 
 export default function RootLayout({
