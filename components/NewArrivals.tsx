@@ -45,14 +45,6 @@ export function NewArrivals() {
   return (
     <div className="bg-white py-12 sm:py-16 md:py-24" data-section="cars">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4 md:mb-6">
-            Nieuw binnen
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light px-2">
-            Snel bij zijn, ze zijn namelijk zo verkocht.
-          </p>
-        </div>
 
         {/* Horizontal Scrolling Car Grid with Overlay Arrows */}
         <div className="relative">
@@ -81,10 +73,10 @@ export function NewArrivals() {
           {showLeftArrow && (
             <button
               onClick={() => scroll('left')}
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-3 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110 border border-gray-200"
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm p-2 rounded-full hover:bg-white/20 transition-all duration-300"
               aria-label="Previous cars"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
+              <ChevronLeft className="w-5 h-5 text-white" />
             </button>
           )}
 
@@ -92,10 +84,10 @@ export function NewArrivals() {
           {showRightArrow && (
             <button
               onClick={() => scroll('right')}
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-3 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110 border border-gray-200"
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm p-2 rounded-full hover:bg-white/20 transition-all duration-300"
               aria-label="Next cars"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
+              <ChevronRight className="w-5 h-5 text-white" />
             </button>
           )}
         </div>

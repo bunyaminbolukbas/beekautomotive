@@ -27,16 +27,18 @@ export function ScrollToTop() {
   };
 
   return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 bg-black text-white p-3 rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110"
-          aria-label="Scroll to top"
-        >
+    <div className={`fixed bottom-8 right-8 z-40 transition-opacity duration-1000 ${
+      isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+    }`}>
+      <button
+        onClick={scrollToTop}
+        className="group flex items-center justify-center text-black hover:text-gray-700 transition-all duration-300"
+        aria-label="Scroll to top"
+      >
+        <div className="bg-white/80 backdrop-blur-sm rounded-full p-2 group-hover:bg-white/90 transition-all duration-300">
           <ChevronUp className="w-6 h-6" />
-        </button>
-      )}
-    </>
+        </div>
+      </button>
+    </div>
   );
 }

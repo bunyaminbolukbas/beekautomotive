@@ -19,9 +19,12 @@ export function NewNavigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
+      const isScrolled = window.scrollY > 20;
       setScrolled(isScrolled);
     };
+
+    // Check initial scroll position
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -30,8 +33,8 @@ export function NewNavigation() {
   return (
     <>
       {/* Fixed Navigation Bar */}
-      <header className={`fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300 ${
-        scrolled ? 'py-2' : 'py-4'
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -53,8 +56,9 @@ export function NewNavigation() {
             {/* Hamburger Menu */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
+              className="inline-flex items-center space-x-2 p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
             >
+              <span className="text-sm font-medium">MENU</span>
               {isOpen ? (
                 <X className="block h-6 w-6" />
               ) : (
@@ -65,8 +69,6 @@ export function NewNavigation() {
         </div>
       </header>
 
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className={`transition-all duration-300 ${scrolled ? 'h-16' : 'h-20'}`}></div>
 
       {/* Overlay */}
       {isOpen && (

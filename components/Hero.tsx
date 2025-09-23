@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 
 export function Hero() {
   return (
-    <div className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-start">
+    <div className="relative h-screen flex items-center justify-start">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -45,10 +45,10 @@ export function Hero() {
               });
             }
           }}
-          className="group flex flex-col items-center space-y-2 text-white hover:text-gray-300 transition-colors duration-300"
+          className="group flex flex-col items-center space-y-3 text-white hover:text-blue-300 transition-all duration-300"
         >
-          <span className="text-sm font-medium opacity-80 group-hover:opacity-100">Scroll down</span>
-          <div className="animate-bounce">
+          <span className="text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
+          <div className="bg-white/10 backdrop-blur-sm rounded-full p-2 group-hover:bg-white/20 transition-all duration-300">
             <ChevronDown className="w-6 h-6" />
           </div>
         </button>
