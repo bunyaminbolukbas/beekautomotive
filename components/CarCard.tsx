@@ -18,7 +18,7 @@ export function CarCard({ car, showNewBadge = true }: CarCardProps) {
 
   return (
     <Link href={`/auto/${car.id}`} className="group block">
-      <div className="bg-white rounded-3xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200 mx-auto max-w-sm sm:max-w-none">
+      <div className="bg-black rounded-3xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-800 mx-auto max-w-sm sm:max-w-none">
         <div className="relative aspect-[4/3] sm:aspect-video overflow-hidden">
           <Image
             src={car.images[0] || '/placeholder-car.jpg'}
@@ -37,21 +37,21 @@ export function CarCard({ car, showNewBadge = true }: CarCardProps) {
         </div>
         
         <div className="p-3 sm:p-4 md:p-6">
-          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors line-clamp-2">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-gray-300 transition-colors line-clamp-2">
             {car.title}
           </h3>
 
-          <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 mb-3">
+          <div className="flex items-center justify-between text-xs sm:text-sm text-gray-300 mb-3">
             <span>{car.year}</span>
             <span>{car.mileage.toLocaleString('nl-NL')} km</span>
             <span>{car.horsepower} pk</span>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-black">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">
               {formatPrice(car.price)}
             </span>
-            <span className="text-xs sm:text-sm text-gray-500 capitalize">
+            <span className="text-xs sm:text-sm text-gray-400 capitalize">
               {car.fuel} • {car.transmission}
             </span>
           </div>

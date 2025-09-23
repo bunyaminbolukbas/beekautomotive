@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function SpecialOfferSection() {
   return (
-    <div className="bg-white py-12 sm:py-16 md:py-24">
+    <div className="bg-black py-12 sm:py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Large Image with Overlay Text */}
         <div className="relative">
