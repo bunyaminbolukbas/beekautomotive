@@ -54,17 +54,23 @@ export function NewNavigation() {
             </div>
 
             {/* Hamburger Menu */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center space-x-2 p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-colors"
-            >
-              <span className="text-sm font-medium">MENU</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
-            </button>
+            <div className="mr-2 sm:mr-16">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={`inline-flex items-center space-x-2 focus:outline-none transition-colors ${
+                  scrolled
+                    ? 'text-gray-900 hover:text-gray-700'
+                    : 'text-white hover:text-gray-200'
+                }`}
+              >
+                <span className="text-sm font-medium">MENU</span>
+                {isOpen ? (
+                  <X className="block h-6 w-6" />
+                ) : (
+                  <Menu className="block h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </header>

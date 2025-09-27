@@ -30,16 +30,8 @@ export function WhyChooseUs() {
             </h2>
             
             <div className="mb-10 sm:mb-12">
-              <p className="text-lg sm:text-xl text-gray-200 font-medium mb-6 sm:mb-8">
-                Elke autoliefhebber verdient het om in zijn of haar droomauto te rijden
-              </p>
-
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
-                Ongeacht prijsklasse of type merk. Landsgrenzen horen geen beperkingen te vormen voor het kopen van je favoriete auto. Met die gedachte is Beek Automotive opgericht.
-              </p>
-
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Eigenaar Rutger van Beek is zijn hele leven al een autofanaat. Op jonge leeftijd wist hij dat zijn toekomst in de autowereld lag. Rutger studeerde aan de bekende IVA Business School. Tijdens zijn opleiding deed hij werkervaring op bij meerdere grote autodealers. Na jaren auto's te hebben verkocht, was de tijd rijp om zijn eigen bedrijf te beginnen.
+                Eigenaar Rutger van Beek en Ilias hebben jarenlange ervaring in de auto industrie. We zijn pas tevreden als jij dat ook bent. Daarom doen we er alles aan om je een zorgeloze en plezierige ervaring te bieden bij het kopen van jouw droomauto. Met onze persoonlijke aanpak, transparantie en expertise zorgen we ervoor dat je met een gerust hart de weg op kunt.
               </p>
             </div>
           </div>
