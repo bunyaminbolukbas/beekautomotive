@@ -16,34 +16,34 @@ export function FixedContactButtons() {
       label: 'Bel ons',
       href: 'tel:+31857926363',
       color: 'bg-slate-600 hover:bg-slate-700',
-      detail: '085 792 6363'
+      tooltip: '+31 (0)88 3888 000'
     },
     {
       icon: WhatsAppIcon,
       label: 'WhatsApp',
       href: 'https://wa.me/31857926363',
       color: 'bg-slate-600 hover:bg-slate-700',
-      detail: 'Chat met ons'
+      tooltip: '+31 (0)88 3888 000'
     },
     {
       icon: Mail,
       label: 'E-mail',
       href: 'mailto:info@beekautomotive.nl',
       color: 'bg-slate-600 hover:bg-slate-700',
-      detail: 'info@beekautomotive.nl'
+      tooltip: 'info@beekautomotive.nl'
     },
     {
       icon: Calendar,
       label: 'Afspraak',
       href: '/contact',
       color: 'bg-slate-600 hover:bg-slate-700',
-      detail: 'Plan een afspraak'
+      tooltip: 'afspraak@beekautomotive.nl'
     }
   ];
 
   return (
-    <div className="fixed right-0 top-1/3 transform -translate-y-1/2 z-40">
-      <div className="flex flex-col space-y-1 sm:space-y-2">
+    <div className="fixed right-0 top-1/2 transform -translate-y-3/4 z-40">
+      <div className="flex flex-col space-y-1">
         {contactButtons.map((button, index) => {
           const IconComponent = button.icon;
 
@@ -53,18 +53,16 @@ export function FixedContactButtons() {
               href={button.href}
               target={button.href.startsWith('http') ? '_blank' : undefined}
               rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className={`group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-md text-white shadow-md transition-all duration-300 hover:scale-105 border border-gray-500/20 ${button.color}`}
+              className={`group relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white shadow-md transition-all duration-300 hover:scale-105 border border-gray-500/20 ${button.color}`}
               title={button.label}
             >
-              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
+              <IconComponent className="w-3 h-3 sm:w-4 sm:h-4 group-hover:opacity-0 transition-opacity duration-300" />
 
-              {/* Tooltip */}
-              <div className="absolute right-16 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="bg-gray-900 text-white text-sm rounded-lg py-2 px-3 whitespace-nowrap shadow-lg">
-                  <div className="font-medium">{button.label}</div>
-                  <div className="text-xs opacity-90">{button.detail}</div>
-                  {/* Arrow */}
-                  <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+              {/* Sliding Tooltip */}
+              <div className="absolute right-full top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">
+                <div className="bg-slate-700 text-white text-sm h-8 sm:h-10 w-52 flex items-center px-3">
+                  <IconComponent className="w-4 h-4 mr-2 text-blue-300 flex-shrink-0" />
+                  <span className="font-medium text-xs">{button.tooltip}</span>
                 </div>
               </div>
             </a>

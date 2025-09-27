@@ -47,10 +47,10 @@ export function Hero() {
           }}
           className="group flex flex-col items-center space-y-3 text-white hover:text-blue-300 transition-all duration-300"
         >
-          <span className="text-sm sm:text-base md:text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
           <div className="bg-white/10 backdrop-blur-sm rounded-full p-2 group-hover:bg-white/20 transition-all duration-300">
             <ChevronDown className="w-6 h-6" />
           </div>
+          <span className="text-sm sm:text-base md:text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
         </button>
       </div>
     </div>
