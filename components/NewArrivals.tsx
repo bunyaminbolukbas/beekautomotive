@@ -50,7 +50,7 @@ export function NewArrivals() {
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto space-x-0 sm:space-x-4 md:space-x-6 pb-4 scrollbar-hide pr-0 sm:pr-20 md:pr-24"
+            className="flex overflow-x-auto space-x-1 sm:space-x-1.5 md:space-x-2 pb-4 scrollbar-hide pr-0 sm:pr-20 md:pr-24"
             style={{
               scrollSnapType: 'x mandatory',
               scrollbarWidth: 'none',

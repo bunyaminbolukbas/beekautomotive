@@ -85,7 +85,7 @@ export function NewNavigation() {
       )}
 
       {/* Slide-out Menu */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+      <div className={`fixed top-0 right-0 h-full w-80 bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="p-6">
@@ -93,22 +93,26 @@ export function NewNavigation() {
           <div className="flex justify-end mb-8">
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+              className="p-2 text-blue-400 hover:text-blue-300"
             >
-              <X className="h-6 w-6" />
+              <X className="h-8 w-8" />
             </button>
           </div>
 
+
           {/* Navigation Links */}
-          <nav className="space-y-4">
-            {navigation.map((item) => (
+          <nav className="space-y-0">
+            {navigation.map((item, index) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-lg font-medium text-gray-700 hover:text-gray-900 py-3 border-b border-gray-100 transition-colors"
+                className="group flex items-center justify-between text-white hover:text-blue-300 py-6 border-b border-blue-400/30 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                {item.name}
+                <span className="text-lg font-normal">{item.name.toUpperCase()}</span>
+                <svg className="w-6 h-6 text-blue-400 group-hover:text-blue-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             ))}
           </nav>

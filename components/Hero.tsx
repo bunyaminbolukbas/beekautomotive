@@ -17,7 +17,7 @@ export function Hero() {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         {/* Gradient fade to black at bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
       </div>
@@ -37,7 +37,7 @@ export function Hero() {
             if (carsSection) {
               const rect = carsSection.getBoundingClientRect();
               const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-              const targetPosition = scrollTop + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+              const targetPosition = scrollTop + rect.top - (window.innerHeight / 2) + (rect.height / 3);
 
               window.scrollTo({
                 top: Math.max(0, targetPosition),
