@@ -116,11 +116,11 @@ export function NewArrivals() {
 
         {/* Custom Work Section */}
         <div className="text-center mt-12 sm:mt-16 md:mt-20 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-white mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-white mb-6 sm:mb-8">
             Maatwerk waarbij onze klanten centraal staan
           </h2>
           <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan. We zoeken, vinden, leveren en onderhouden uw auto.
+            Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan. <br></br>We zoeken, vinden en leveren uw auto.
           </p>
         </div>
       </div>
