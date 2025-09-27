@@ -66,7 +66,7 @@ function StatCard({ number, suffix, title }: StatCardProps) {
 
 export function SpecialOfferSection() {
   return (
-    <div className="bg-black py-12 sm:py-16 md:py-24">
+    <div className="bg-black">
       <div className="relative">
         <div
           className="aspect-[4/3] sm:aspect-[16/9] overflow-hidden relative"

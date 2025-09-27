@@ -87,10 +87,10 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <div className="bg-black py-16 sm:py-24">
+    <div className="bg-black py-4 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Text Box Section */}
-        <div className="bg-gray-800 p-6 sm:p-8 mb-8 sm:mb-12">
+        <div className="bg-gray-800 p-6 sm:p-8 mb-16 sm:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Left side - Title */}
             <div>
