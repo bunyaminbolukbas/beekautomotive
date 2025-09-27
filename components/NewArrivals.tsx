@@ -108,11 +108,20 @@ export function NewArrivals() {
         <div className="text-center mt-8 sm:mt-12 md:mt-16 px-4">
           <Link
             href="/aanbod"
-            className="inline-flex items-center space-x-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:text-blue-300 transition-colors font-medium text-sm sm:text-base"
+            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 transition-colors font-medium text-base"
           >
-            <span>Volledig aanbod</span>
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            VOLLEDIG AANBOD (54)
           </Link>
+        </div>
+
+        {/* Custom Work Section */}
+        <div className="text-center mt-12 sm:mt-16 md:mt-20 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-white mb-6 sm:mb-8">
+            Maatwerk waarbij onze klanten centraal staan
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan. We zoeken, vinden, leveren en onderhouden uw auto.
+          </p>
         </div>
       </div>
 
