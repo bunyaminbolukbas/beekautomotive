@@ -8,17 +8,17 @@ export default function AanbodPage() {
   const cars = getCars();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <NewNavigation />
       <FixedContactButtons />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4">
             Ons Aanbod
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Ontdek onze collectie van exclusieve sportauto's en luxe voertuigen. 
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+            Ontdek onze collectie van exclusieve sportauto's en luxe voertuigen.
             Elk voertuig is zorgvuldig geselecteerd en in topconditie.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function AanbodPage() {
 
         {cars.length === 0 && (
           <div className="text-center py-8 sm:py-12">
-            <p className="text-gray-500 text-lg">Momenteel geen auto's beschikbaar.</p>
+            <p className="text-gray-300 text-lg">Momenteel geen auto's beschikbaar.</p>
           </div>
         )}
       </div>

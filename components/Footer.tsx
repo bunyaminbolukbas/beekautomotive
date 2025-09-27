@@ -13,7 +13,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Image
-                src="/beek-automotive-logo.png"
+                src="/beek-automotive-zwart-logo.png"
                 alt="Beek Automotive"
                 width={200}
                 height={100}

@@ -76,7 +76,7 @@ export function NewArrivals() {
               className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm p-2 rounded-full hover:bg-white/20 transition-all duration-300"
               aria-label="Previous cars"
             >
-              <ChevronLeft className="w-5 h-5 text-white" />
+              <ChevronLeft className="w-5 h-5 text-white hover:text-blue-300 transition-colors" />
             </button>
           )}
 
@@ -87,7 +87,7 @@ export function NewArrivals() {
               className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm p-2 rounded-full hover:bg-white/20 transition-all duration-300"
               aria-label="Next cars"
             >
-              <ChevronRight className="w-5 h-5 text-white" />
+              <ChevronRight className="w-5 h-5 text-white hover:text-blue-300 transition-colors" />
             </button>
           )}
         </div>
@@ -108,7 +108,7 @@ export function NewArrivals() {
         <div className="text-center mt-8 sm:mt-12 md:mt-16 px-4">
           <Link
             href="/aanbod"
-            className="inline-flex items-center space-x-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm sm:text-base"
+            className="inline-flex items-center space-x-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:text-blue-300 transition-colors font-medium text-sm sm:text-base"
           >
             <span>Volledig aanbod</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

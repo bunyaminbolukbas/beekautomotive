@@ -37,7 +37,7 @@ export function CarCard({ car, showNewBadge = true }: CarCardProps) {
         </div>
         
         <div className="p-3 sm:p-4 md:p-6">
-          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-gray-300 transition-colors line-clamp-2">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors line-clamp-2">
             {car.title}
           </h3>
 

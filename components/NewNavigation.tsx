@@ -42,7 +42,7 @@ export function NewNavigation() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/beek-automotive-logo.png"
+                  src="/beek-automotive-zwart-logo.png"
                   alt="Beek Automotive"
                   width={200}
                   height={100}
