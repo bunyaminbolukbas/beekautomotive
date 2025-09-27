@@ -97,7 +97,7 @@ export function WhyChooseUs() {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-blue-400 mb-4">
                 Advies nodig?{' '}
                 <span className="text-white">
-                  Vraag het aan één van onze experts
+                  Vraag <br></br>het aan één van onze experts
                 </span>
               </h2>
             </div>
@@ -105,11 +105,10 @@ export function WhyChooseUs() {
             {/* Right side - Content */}
             <div>
               <h3 className="text-xl sm:text-2xl font-normal text-white mb-4">
-                Waarom kiezen voor van Beek?
+                Waarom kiezen voor Beek Automotive?
               </h3>
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Eigenaar Rutger van Beek en Ilias hebben jarenlange ervaring in de auto industrie. We zijn pas tevreden als jij dat ook bent. Daarom doen we er alles aan om je een zorgeloze en plezierige ervaring te bieden bij het kopen van jouw droomauto. Met onze persoonlijke aanpak, transparantie en expertise zorgen we ervoor dat je met een gerust hart de weg op kunt. Neem contact met ons op of bel direct op{' '}
-                <span className="text-blue-400">088 3888 000</span>.
+                Eigenaar Rutger van Beek en Ilias hebben jarenlange ervaring in de auto industrie. We zijn pas tevreden als jij dat ook bent. Daarom doen we er alles aan om je een zorgeloze en plezierige ervaring te bieden bij het kopen van jouw droomauto. Met onze persoonlijke aanpak, transparantie en expertise zorgen we ervoor dat je met een gerust hart de weg op kunt.
               </p>
             </div>
           </div>
