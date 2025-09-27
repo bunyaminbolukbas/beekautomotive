@@ -48,11 +48,28 @@ export function Hero() {
           className="group flex flex-col items-center space-y-3 text-white hover:text-blue-300 transition-all duration-300"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-full p-2 group-hover:bg-white/20 transition-all duration-300">
-            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-6 h-6 animate-bounce-down" />
           </div>
           <span className="text-sm sm:text-base md:text-lg font-medium tracking-wide group-hover:scale-105 transition-transform duration-300">Ontdek meer</span>
         </button>
       </div>
+
+      <style jsx>{`
+        @keyframes bounce-down {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(8px);
+          }
+          60% {
+            transform: translateY(4px);
+          }
+        }
+        :global(.animate-bounce-down) {
+          animation: bounce-down 3s infinite;
+        }
+      `}</style>
     </div>
   );
 }
