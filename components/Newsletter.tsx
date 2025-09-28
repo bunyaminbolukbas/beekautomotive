@@ -15,7 +15,7 @@ export function Newsletter() {
   return (
     <div className="pt-4 sm:pt-8 pb-16 sm:pb-20" style={{backgroundColor: '#0A0E14'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gray-800 p-6 sm:p-8">
+        <div className="p-6 sm:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Left side - Newsletter text */}
             <div>
