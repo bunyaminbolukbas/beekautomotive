@@ -1,11 +1,12 @@
 import { NewNavigation } from '@/components/NewNavigation';
 import { FixedContactButtons } from '@/components/FixedContactButtons';
 import { Footer } from '@/components/Footer';
-import { Car, Heart, Users, Award } from 'lucide-react';
+import { Car, Heart, Users, Award, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <NewNavigation />
       <FixedContactButtons />
       
@@ -24,7 +25,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
+          <h1 className="text-4xl sm:text-5xl font-light text-white mb-4">
             Over Beek Automotive
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto">
@@ -39,10 +40,10 @@ export default function AboutPage() {
         {/* Story Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20 sm:mb-32">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
               Ons verhaal
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
                 Beek Automotive werd opgericht door twee gepassioneerde autoliefhebbers: 
                 <strong> Rutger</strong> en <strong>Ilias</strong>. Wat begon als een gedeelde hobby 
@@ -80,7 +81,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <div className="mb-20 sm:mb-32">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">
             Onze waarden
           </h2>
           
@@ -89,8 +90,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Passie</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-white mb-4">Passie</h3>
+              <p className="text-gray-400">
                 Auto's zijn onze passie. Deze liefde voor voertuigen delen we graag met onze klanten.
               </p>
             </div>
@@ -99,8 +100,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Persoonlijk</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-white mb-4">Persoonlijk</h3>
+              <p className="text-gray-400">
                 Elke klant is uniek. We nemen de tijd om uw wensen te begrijpen en de perfecte match te vinden.
               </p>
             </div>
@@ -109,8 +110,8 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Kwaliteit</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-white mb-4">Kwaliteit</h3>
+              <p className="text-gray-400">
                 Alleen de beste auto's komen in onze showroom. Kwaliteit staat altijd voorop.
               </p>
             </div>
@@ -119,27 +120,132 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                 <Car className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibent text-gray-900 mb-4">Expertise</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-white mb-4">Expertise</h3>
+              <p className="text-gray-400">
                 Jarenlange ervaring en een uitgebreid netwerk zorgen voor de beste service.
               </p>
             </div>
           </div>
         </div>
 
+        {/* Team Section */}
+        <div className="mb-20 sm:mb-32">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-8">
+            Ons team
+          </h2>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-start">
+            {/* Rutger Card */}
+            <div className="bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden w-72 sm:w-80">
+              {/* Member Image */}
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-200 to-gray-400">
+                <Image
+                  src="/team/rutger.jpg"
+                  alt="Rutger van Beek"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Member Info */}
+              <div className="p-3">
+                {/* Role */}
+                <p className="text-xs text-gray-400 mb-1 uppercase tracking-wide">
+                  Sales Manager
+                </p>
+
+                {/* Name */}
+                <h3 className="text-base font-normal text-white mb-2">
+                  Rutger van Beek
+                </h3>
+
+                {/* Divider */}
+                <div className="border-t border-gray-600 mb-3"></div>
+
+                {/* Contact Options */}
+                <div className="flex justify-start gap-2">
+                  <a
+                    href="tel:+31612345678"
+                    className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
+                    title="Bel ons"
+                  >
+                    <Phone className="w-4 h-4 text-white" />
+                  </a>
+                  <a
+                    href="mailto:rutger@beekautomotive.nl"
+                    className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
+                    title="E-mail"
+                  >
+                    <Mail className="w-4 h-4 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Ilias Card */}
+            <div className="bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden w-72 sm:w-80">
+              {/* Member Image */}
+              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-200 to-gray-400">
+                <Image
+                  src="/team/ilias.jpg"
+                  alt="Ilias"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Member Info */}
+              <div className="p-3">
+                {/* Role */}
+                <p className="text-xs text-gray-400 mb-1 uppercase tracking-wide">
+                  Sales Manager
+                </p>
+
+                {/* Name */}
+                <h3 className="text-base font-normal text-white mb-2">
+                  Ilias
+                </h3>
+
+                {/* Divider */}
+                <div className="border-t border-gray-600 mb-3"></div>
+
+                {/* Contact Options */}
+                <div className="flex justify-start gap-2">
+                  <a
+                    href="tel:+31687654321"
+                    className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
+                    title="Bel ons"
+                  >
+                    <Phone className="w-4 h-4 text-white" />
+                  </a>
+                  <a
+                    href="mailto:ilias@beekautomotive.nl"
+                    className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
+                    title="E-mail"
+                  >
+                    <Mail className="w-4 h-4 text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Mission Section */}
-        <div className="bg-gray-50 rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+        <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
             Onze missie
           </h2>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
-            Bij Beek Automotive geloven we dat elke autoliefhebber zijn droomauto verdient. 
-            Wij specialiseren ons in datgene waar autoliefhebbers voor omkijken: exclusieve, 
-            bijzondere en premium voertuigen die niet alleen vervoermiddel zijn, maar een 
+          <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
+            Bij Beek Automotive geloven we dat elke autoliefhebber zijn droomauto verdient.
+            Wij specialiseren ons in datgene waar autoliefhebbers voor omkijken: exclusieve,
+            bijzondere en premium voertuigen die niet alleen vervoermiddel zijn, maar een
             statement maken.
           </p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Van sportauto's tot luxe sedans, van klassiekers tot moderne supercars - 
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            Van sportauto's tot luxe sedans, van klassiekers tot moderne supercars -
             wij helpen u bij het vinden van die ene auto die perfect bij u past.
           </p>
         </div>
