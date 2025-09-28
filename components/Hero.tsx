@@ -18,8 +18,8 @@ export function Hero() {
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        {/* Gradient fade to black at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+        {/* Gradient fade to custom background at bottom */}
+        <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, transparent, transparent, #0A0E14)'}}></div>
       </div>
 
       {/* Content */}

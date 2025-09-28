@@ -44,7 +44,7 @@ export function NewArrivals() {
   }, []);
 
   return (
-    <div className="bg-black py-12 sm:py-16 md:py-24" data-section="cars">
+    <div className="py-12 sm:py-16 md:py-24" style={{backgroundColor: '#0A0E14'}} data-section="cars">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Horizontal Scrolling Car Grid with Overlay Arrows */}

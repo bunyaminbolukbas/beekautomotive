@@ -9,7 +9,7 @@ export default function AanbodPage() {
   const cars = getCars();
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
       <NewNavigation />
       <FixedContactButtons />
 

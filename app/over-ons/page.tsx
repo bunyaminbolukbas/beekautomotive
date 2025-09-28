@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
       <NewNavigation />
       <FixedContactButtons />
       

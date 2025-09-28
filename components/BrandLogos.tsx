@@ -53,7 +53,7 @@ export function BrandLogos() {
         </div>
 
         <div className="text-center">
-          <button className="bg-black text-white px-8 sm:px-12 py-4 font-semibold hover:bg-gray-800 transition-colors text-sm sm:text-base">
+          <button className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 transition-colors font-medium text-base">
             Vertel ons meer
           </button>
         </div>

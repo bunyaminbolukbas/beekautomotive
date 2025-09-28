@@ -7,10 +7,10 @@ export default function ReviewsPage() {
   const reviews = [
     {
       id: 1,
-      name: 'Bunyamin Emre',
+      name: 'Bianca Vlaanderen',
       rating: 5,
-      date: '6 maanden geleden',
-      text: 'Heb bij Car Relief een mooie Polo gekocht voor een scherpe prijs. Fijn contact en komen hun afspraken na. Auto werd direct overgeschreven en ik kon gelijk...'
+      date: '2 weken geleden',
+      text: 'Gisteren 10 sept mijn nieuw aangekochte Ford focus opgehaald bij car relief en is keurig afgeleverd.... Was beschadiging op bumper en heeft hij heel mooi laten herstellen.. Erg blij mee en rijd heerlijk. In love with this Ford!!! Dank je wel Rutger'
     },
     {
       id: 2,
@@ -21,10 +21,10 @@ export default function ReviewsPage() {
     },
     {
       id: 3,
-      name: 'Bianca Vlaanderen',
+      name: 'Jan Kelder',
       rating: 5,
-      date: '2 weken geleden',
-      text: 'Gisteren 10 sept mijn nieuw aangekochte Ford focus opgehaald bij car relief en is keurig afgeleverd.... Was beschadiging op bumper en heeft hij heel mooi laten herstellen.. Erg blij mee en rijd heerlijk. In love with this Ford!!! Dank je wel Rutger'
+      date: 'een maand geleden',
+      text: 'Op de eerste plaats kwam hier voor het eerst dus was sceptisch. maar jongens om eerlijk te zijn alles in de puntjes verzorgd kan niet anders zeggen deze jongens...'
     },
     {
       id: 4,
@@ -46,13 +46,6 @@ export default function ReviewsPage() {
       rating: 5,
       date: '4 maanden geleden',
       text: 'Ontzettend fijne garage en een zeer prettige ervaring. Vanaf het eerste bericht ben ik snel, professioneel en heel vriendelijk geholpen door Rutger en Ilias...'
-    },
-    {
-      id: 7,
-      name: 'Jan Kelder',
-      rating: 5,
-      date: 'een maand geleden',
-      text: 'Op de eerste plaats kwam hier voor het eerst dus was sceptisch. maar jongens om eerlijk te zijn alles in de puntjes verzorgd kan niet anders zeggen deze jongens...'
     }
   ];
 
@@ -60,7 +53,7 @@ export default function ReviewsPage() {
   const totalReviews = 69;
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
       <NewNavigation />
       <FixedContactButtons />
 
@@ -116,7 +109,7 @@ export default function ReviewsPage() {
             href="https://www.google.com/maps/place/Beek+Automotive"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-white text-black px-8 sm:px-12 py-4 font-semibold hover:bg-gray-200 transition-colors text-sm sm:text-base"
+            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 transition-colors font-medium text-base"
           >
             <span>Bekijk alle reviews op Google</span>
           </a>

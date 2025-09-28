@@ -66,7 +66,7 @@ function StatCard({ number, suffix, title }: StatCardProps) {
 
 export function SpecialOfferSection() {
   return (
-    <div className="bg-black">
+    <div style={{backgroundColor: '#0A0E14'}}>
       <div className="relative">
         <div
           className="aspect-[4/3] sm:aspect-[16/9] overflow-hidden relative"
@@ -79,10 +79,10 @@ export function SpecialOfferSection() {
         >
           {/* Dark overlay for better contrast */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          {/* Gradient fade from black at top */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
-          {/* Gradient fade to black at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          {/* Gradient fade from custom background at top */}
+          <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, #0A0E14, transparent, transparent)'}}></div>
+          {/* Gradient fade to custom background at bottom */}
+          <div className="absolute inset-0" style={{background: 'linear-gradient(to top, #0A0E14, transparent, transparent)'}}></div>
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">

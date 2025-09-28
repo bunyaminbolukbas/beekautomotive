@@ -5,11 +5,12 @@ import { Hero } from '@/components/Hero';
 import { NewArrivals } from '@/components/NewArrivals';
 import { SpecialOfferSection } from '@/components/SpecialOfferSection';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
+import { Newsletter } from '@/components/Newsletter';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
       <NewNavigation />
       <FixedContactButtons />
       <ScrollToTop />
@@ -17,6 +18,7 @@ export default function Home() {
       <NewArrivals />
       <SpecialOfferSection />
       <WhyChooseUs />
+      <Newsletter />
       <Footer />
     </div>
   );

@@ -24,7 +24,7 @@ export default function FinancieringPage() {
   const totalAmount = monthlyPayment * leaseTerm + downPayment;
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
       <NewNavigation />
       <FixedContactButtons />
 
