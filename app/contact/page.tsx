@@ -9,14 +9,14 @@ export default function ContactPage() {
       <NewNavigation />
       <FixedContactButtons />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20 ml-24 sm:ml-40 lg:ml-48">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-20 lg:ml-24 xl:ml-40">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left side - Text Content & Google Maps */}
           <div className="space-y-8">
             {/* Text Content */}
             <div className="space-y-10">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-tight">
                 Heeft u vragen of wilt<br />
                 u meer informatie?
               </h2>
@@ -31,7 +31,7 @@ export default function ContactPage() {
             </div>
 
             {/* Google Maps */}
-            <div className="h-[300px] bg-gray-800">
+            <div className="h-[250px] sm:h-[300px] bg-gray-800">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.123456789!2d5.5555555!3d52.1666666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sHet%20Laar%206%2C%206733%20BZ%20Wekerom!5e0!3m2!1snl!2snl!4v1234567890123"
                 width="100%"

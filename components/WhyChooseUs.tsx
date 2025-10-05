@@ -87,10 +87,10 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <div className="pt-4 sm:pt-8 pb-16 sm:pb-20" style={{backgroundColor: '#0A0E14'}}>
+    <div className="pt-16 sm:pt-20 md:pt-24 pb-24 sm:pb-28 md:pb-32" style={{backgroundColor: '#0A0E14'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Text Box Section */}
-        <div className="bg-gray-800 p-6 sm:p-8 mb-16 sm:mb-20">
+        <div className="bg-gray-800 p-8 sm:p-10 md:p-12 mb-20 sm:mb-24 md:mb-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Left side - Title */}
             <div>

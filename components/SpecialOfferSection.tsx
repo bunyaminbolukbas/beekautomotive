@@ -54,10 +54,10 @@ function StatCard({ number, suffix, title }: StatCardProps) {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
       }`}
     >
-      <div className="text-lg sm:text-xl lg:text-2xl font-medium text-white mb-1">
+      <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium text-white mb-1">
         {count}{suffix}
       </div>
-      <div className="text-sm sm:text-base font-medium tracking-wide text-gray-300">
+      <div className="text-xs sm:text-sm lg:text-base font-medium tracking-wide text-gray-300 leading-tight">
         {title}
       </div>
     </div>
@@ -66,7 +66,7 @@ function StatCard({ number, suffix, title }: StatCardProps) {
 
 export function SpecialOfferSection() {
   return (
-    <div style={{backgroundColor: '#0A0E14'}}>
+    <div className="pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20" style={{backgroundColor: '#0A0E14'}}>
       <div className="relative">
         <div
           className="aspect-[4/3] sm:aspect-[16/9] overflow-hidden relative"
@@ -85,20 +85,22 @@ export function SpecialOfferSection() {
           <div className="absolute inset-0" style={{background: 'linear-gradient(to top, #0A0E14, transparent, transparent)'}}></div>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-4 max-w-6xl mx-auto">
+          <div className="absolute inset-0 flex items-center justify-center py-8 sm:py-12">
+            <div className="text-center px-6 sm:px-8 max-w-6xl mx-auto">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white mb-6 sm:mb-8">
                 Maatwerk waarbij onze klanten centraal staan
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-16">
-                Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan.<br />
-                Ben je op zoek naar een bepaald merk, model of type maar staat je droomauto er niet tussen?<br />
-                Geen paniek, we gaan graag voor je op zoek binnen ons internationale netwerk<br />
-                om te kijken wat er mogelijk is.
-              </p>
+              <div className="max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
+                  Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan.
+                </p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mt-4">
+                  Ben je op zoek naar een bepaald merk, model of type maar staat je droomauto er niet tussen? Geen paniek, we gaan graag voor je op zoek binnen ons internationale netwerk om te kijken wat er mogelijk is.
+                </p>
+              </div>
 
               {/* Statistics Section */}
-              <div className="grid grid-cols-3 gap-4 lg:gap-8 max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-8 max-w-lg sm:max-w-2xl mx-auto">
                 <StatCard number={10} suffix="+" title="Jaren ervaring" />
                 <StatCard number={500} suffix="+" title="Tevreden klanten" />
                 <StatCard number={20} suffix="+" title="Auto's op voorraad" />

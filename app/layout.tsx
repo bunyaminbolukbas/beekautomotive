@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Beek Automotive - Auto Dealer',
   description: 'Ontdek de nieuwste modellen bij Beek Automotive.',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
