@@ -54,10 +54,10 @@ function StatCard({ number, suffix, title }: StatCardProps) {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
       }`}
     >
-      <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium text-white mb-1">
+      <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-white mb-2">
         {count}{suffix}
       </div>
-      <div className="text-xs sm:text-sm lg:text-base font-medium tracking-wide text-gray-300 leading-tight">
+      <div className="text-sm sm:text-base lg:text-lg font-medium tracking-wide text-gray-300 leading-tight">
         {title}
       </div>
     </div>
@@ -66,7 +66,7 @@ function StatCard({ number, suffix, title }: StatCardProps) {
 
 export function SpecialOfferSection() {
   return (
-    <div className="pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20" style={{backgroundColor: '#0A0E14'}}>
+    <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-16 sm:pb-20 md:pb-24 lg:pb-28" style={{backgroundColor: '#f2f4f6'}}>
       <div className="relative">
         <div
           className="aspect-[4/3] sm:aspect-[16/9] overflow-hidden relative"
@@ -79,18 +79,14 @@ export function SpecialOfferSection() {
         >
           {/* Dark overlay for better contrast */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          {/* Gradient fade from custom background at top */}
-          <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, #0A0E14, transparent, transparent)'}}></div>
-          {/* Gradient fade to custom background at bottom */}
-          <div className="absolute inset-0" style={{background: 'linear-gradient(to top, #0A0E14, transparent, transparent)'}}></div>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center py-8 sm:py-12">
-            <div className="text-center px-6 sm:px-8 max-w-6xl mx-auto">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white mb-6 sm:mb-8">
+          <div className="absolute inset-0 flex items-center justify-center py-12 sm:py-16 md:py-20">
+            <div className="text-center px-6 sm:px-8 md:px-12 max-w-6xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8 sm:mb-10 md:mb-12">
                 Maatwerk waarbij onze klanten centraal staan
               </h2>
-              <div className="max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+              <div className="max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
                 <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
                   Het kopen van een auto is voor ons altijd maatwerk waarbij onze klanten centraal staan.
                 </p>
@@ -100,7 +96,7 @@ export function SpecialOfferSection() {
               </div>
 
               {/* Statistics Section */}
-              <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-8 max-w-lg sm:max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-lg sm:max-w-2xl mx-auto">
                 <StatCard number={10} suffix="+" title="Jaren ervaring" />
                 <StatCard number={500} suffix="+" title="Tevreden klanten" />
                 <StatCard number={20} suffix="+" title="Auto's op voorraad" />

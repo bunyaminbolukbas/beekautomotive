@@ -10,7 +10,7 @@ import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
       <ScrollToTop />

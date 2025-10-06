@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
       
@@ -25,7 +25,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-light text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-4">
             Over Beek Automotive
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto">
@@ -40,7 +40,7 @@ export default function AboutPage() {
         {/* Story Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20 sm:mb-32">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">
               Ons verhaal
             </h2>
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -72,7 +72,7 @@ export default function AboutPage() {
               alt="Rutger en Ilias - Oprichters van Beek Automotive"
               className="w-full h-96 sm:h-[500px] object-cover rounded-lg shadow-xl"
             />
-            <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white p-4 rounded">
+            <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-gray-800 p-4 rounded">
               <p className="font-semibold">Rutger & Ilias</p>
               <p className="text-sm">Oprichters Beek Automotive</p>
             </div>
@@ -81,16 +81,16 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <div className="mb-20 sm:mb-32">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-16">
             Onze waarden
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
+                <Heart className="w-8 h-8 text-gray-800" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Passie</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Passie</h3>
               <p className="text-gray-400">
                 Auto's zijn onze passie. Deze liefde voor voertuigen delen we graag met onze klanten.
               </p>
@@ -98,9 +98,9 @@ export default function AboutPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-gray-800" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Persoonlijk</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Persoonlijk</h3>
               <p className="text-gray-400">
                 Elke klant is uniek. We nemen de tijd om uw wensen te begrijpen en de perfecte match te vinden.
               </p>
@@ -108,9 +108,9 @@ export default function AboutPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-8 h-8 text-white" />
+                <Award className="w-8 h-8 text-gray-800" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Kwaliteit</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Kwaliteit</h3>
               <p className="text-gray-400">
                 Alleen de beste auto's komen in onze showroom. Kwaliteit staat altijd voorop.
               </p>
@@ -118,9 +118,9 @@ export default function AboutPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <Car className="w-8 h-8 text-white" />
+                <Car className="w-8 h-8 text-gray-800" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Expertise</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Expertise</h3>
               <p className="text-gray-400">
                 Jarenlange ervaring en een uitgebreid netwerk zorgen voor de beste service.
               </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <div className="mb-20 sm:mb-32">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-8">
             Ons team
           </h2>
 
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 </p>
 
                 {/* Name */}
-                <h3 className="text-base font-normal text-white mb-2">
+                <h3 className="text-base font-normal text-gray-800 mb-2">
                   Rutger van Beek
                 </h3>
 
@@ -170,14 +170,14 @@ export default function AboutPage() {
                     className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
                     title="Bel ons"
                   >
-                    <Phone className="w-4 h-4 text-white" />
+                    <Phone className="w-4 h-4 text-gray-800" />
                   </a>
                   <a
                     href="mailto:rutger@beekautomotive.nl"
                     className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
                     title="E-mail"
                   >
-                    <Mail className="w-4 h-4 text-white" />
+                    <Mail className="w-4 h-4 text-gray-800" />
                   </a>
                 </div>
               </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 </p>
 
                 {/* Name */}
-                <h3 className="text-base font-normal text-white mb-2">
+                <h3 className="text-base font-normal text-gray-800 mb-2">
                   Ilias
                 </h3>
 
@@ -218,14 +218,14 @@ export default function AboutPage() {
                     className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
                     title="Bel ons"
                   >
-                    <Phone className="w-4 h-4 text-white" />
+                    <Phone className="w-4 h-4 text-gray-800" />
                   </a>
                   <a
                     href="mailto:ilias@beekautomotive.nl"
                     className="flex items-center justify-center w-10 h-10 bg-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105 border border-gray-500/20"
                     title="E-mail"
                   >
-                    <Mail className="w-4 h-4 text-white" />
+                    <Mail className="w-4 h-4 text-gray-800" />
                   </a>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function AboutPage() {
 
         {/* Mission Section */}
         <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">
             Onze missie
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">

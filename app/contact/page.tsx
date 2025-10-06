@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
 
@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Text Content */}
             <div className="space-y-10">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light text-gray-800 leading-tight">
                 Heeft u vragen of wilt<br />
                 u meer informatie?
               </h2>

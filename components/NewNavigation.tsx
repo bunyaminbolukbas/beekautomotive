@@ -34,7 +34,7 @@ export function NewNavigation() {
     <>
       {/* Fixed Navigation Bar */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-black/50 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
+        scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -59,7 +59,7 @@ export function NewNavigation() {
                 onClick={() => setIsOpen(!isOpen)}
                 className={`inline-flex items-center space-x-3 p-3 focus:outline-none transition-colors ${
                   scrolled
-                    ? 'text-white hover:text-blue-300'
+                    ? 'text-gray-800 hover:text-blue-600'
                     : 'text-white hover:text-blue-300'
                 }`}
               >

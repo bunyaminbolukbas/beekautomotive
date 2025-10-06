@@ -24,7 +24,7 @@ export default function FinancieringPage() {
   const totalAmount = monthlyPayment * leaseTerm + downPayment;
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
 
@@ -45,7 +45,7 @@ export default function FinancieringPage() {
           {/* Content */}
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="text-white">
+              <div className="text-gray-800">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6">
                   Financieringen
                 </h1>
@@ -73,8 +73,8 @@ export default function FinancieringPage() {
           {/* Calculator */}
           <div className="bg-gray-800 p-6 sm:p-8 md:p-10">
             <div className="flex items-center mb-8">
-              <Calculator className="w-8 h-8 text-white mr-3" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Lease Calculator</h2>
+              <Calculator className="w-8 h-8 text-gray-800 mr-3" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Lease Calculator</h2>
             </div>
 
             <div className="space-y-6">
@@ -98,7 +98,7 @@ export default function FinancieringPage() {
                     <span>€200.000</span>
                   </div>
                 </div>
-                <div className="mt-2 text-lg font-semibold text-white">
+                <div className="mt-2 text-lg font-semibold text-gray-800">
                   €{carPrice.toLocaleString('nl-NL')}
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function FinancieringPage() {
                     <span>€{Math.floor(carPrice * 0.5).toLocaleString('nl-NL')}</span>
                   </div>
                 </div>
-                <div className="mt-2 text-lg font-semibold text-white">
+                <div className="mt-2 text-lg font-semibold text-gray-800">
                   €{downPayment.toLocaleString('nl-NL')}
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function FinancieringPage() {
                     <span>10%</span>
                   </div>
                 </div>
-                <div className="mt-2 text-lg font-semibold text-white">
+                <div className="mt-2 text-lg font-semibold text-gray-800">
                   {interestRate}%
                 </div>
               </div>
@@ -178,11 +178,11 @@ export default function FinancieringPage() {
 
             {/* Results */}
             <div className="mt-8 p-6 bg-gray-700 border border-gray-600">
-              <h3 className="text-lg font-semibold text-white mb-4">Jouw maandlasten</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Jouw maandlasten</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Maandelijkse betaling:</span>
-                  <span className="text-2xl font-bold text-white">€{monthlyPayment.toLocaleString('nl-NL')}</span>
+                  <span className="text-2xl font-bold text-gray-800">€{monthlyPayment.toLocaleString('nl-NL')}</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-gray-300">Totaal te betalen:</span>
@@ -199,7 +199,7 @@ export default function FinancieringPage() {
           {/* Financing Options */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">
                 Financieringsopties
               </h2>
               <p className="text-gray-300 mb-8">
@@ -214,10 +214,10 @@ export default function FinancieringPage() {
               <div className="bg-gray-800 border border-gray-700 p-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <Euro className="w-8 h-8 text-white" />
+                    <Euro className="w-8 h-8 text-gray-800" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-white mb-2">Private Lease</h3>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Private Lease</h3>
                     <p className="text-gray-300 mb-4">
                       Rij zorgeloos in jouw droomauto met een all-in maandprijs.
                       Inclusief verzekering, onderhoud en wegenbelasting.
@@ -244,10 +244,10 @@ export default function FinancieringPage() {
               <div className="bg-gray-800 border border-gray-700 p-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <TrendingUp className="w-8 h-8 text-white" />
+                    <TrendingUp className="w-8 h-8 text-gray-800" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-white mb-2">Financial Lease</h3>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Financial Lease</h3>
                     <p className="text-gray-300 mb-4">
                       Ideaal voor ondernemers. Lease jouw auto en profiteer van
                       fiscale voordelen en BTW-aftrek.
@@ -274,10 +274,10 @@ export default function FinancieringPage() {
               <div className="bg-gray-800 border border-gray-700 p-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <Shield className="w-8 h-8 text-white" />
+                    <Shield className="w-8 h-8 text-gray-800" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-white mb-2">Klassieke Financiering</h3>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Klassieke Financiering</h3>
                     <p className="text-gray-300 mb-4">
                       Traditionele autofinanciering met vaste maandlasten en
                       direct eigendom van jouw auto.

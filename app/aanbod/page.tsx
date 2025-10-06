@@ -9,14 +9,14 @@ export default function AanbodPage() {
   const cars = getCars();
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-light text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-4">
             Aanbod <span className="text-gray-400">({cars.length})</span>
           </h1>
           <p className="text-lg text-gray-400 mb-12">

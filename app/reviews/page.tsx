@@ -53,14 +53,14 @@ export default function ReviewsPage() {
   const totalReviews = 69;
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0A0E14'}}>
+    <div className="min-h-screen" style={{backgroundColor: '#f2f4f6'}}>
       <NewNavigation />
       <FixedContactButtons />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20">
-          <h1 className="text-4xl sm:text-5xl font-light text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-4">
             Wat onze klanten zeggen
           </h1>
 
@@ -70,7 +70,7 @@ export default function ReviewsPage() {
                 <Star key={i} className="w-6 h-6 sm:w-8 sm:h-8 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">{averageRating}/5</div>
+            <div className="text-2xl sm:text-3xl font-bold text-gray-800">{averageRating}/5</div>
           </div>
 
           <p className="text-lg sm:text-xl text-gray-300">
@@ -83,7 +83,7 @@ export default function ReviewsPage() {
           {reviews.map((review) => (
             <div key={review.id} className="bg-gray-800 border border-gray-700 p-6 sm:p-8 hover:bg-gray-750 transition-colors duration-300">
               <div className="mb-6">
-                <h3 className="font-semibold text-white text-sm sm:text-base">{review.name}</h3>
+                <h3 className="font-semibold text-gray-800 text-sm sm:text-base">{review.name}</h3>
                 <p className="text-xs sm:text-sm text-gray-400">{review.date}</p>
               </div>
 
@@ -109,7 +109,7 @@ export default function ReviewsPage() {
             href="https://www.google.com/maps/place/Beek+Automotive"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 transition-colors font-medium text-base"
+            className="inline-block bg-gray-800 hover:bg-gray-700 text-gray-800 px-8 py-3 transition-colors font-medium text-base"
           >
             <span>Bekijk alle reviews op Google</span>
           </a>
